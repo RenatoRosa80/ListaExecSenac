@@ -12,13 +12,16 @@ nvoltas = int(input("Qual o numero de voltas?")) #10
 abastecimento = int(input("numero de abastecimento desejado?")) #2
 consumo = float(input("Consumo do carro em Km/L?")) #10
 
-
 #processamento
-kmTotal = (pistaC / 1000) * nvoltas
-consumoTotal = kmTotal / consumo
-litros = consumoTotal / abastecimento
+#kmTotal = (pistaC / 1000) * nvoltas
+#consumoTotal = kmTotal / consumo
+#litros = consumoTotal / abastecimento
 
+def calculoLitros():
+    kmTotal = (pistaC / 1000) * nvoltas
+    consumoTotal = kmTotal / consumo
+    return consumoTotal / abastecimento
 
 #saida
-print("o número mínimo de litros necessários eh", str(litros))
+print("o número mínimo de litros necessários eh", calculoLitros())
 
